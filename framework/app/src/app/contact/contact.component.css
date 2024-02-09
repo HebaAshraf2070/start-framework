@@ -1,0 +1,28 @@
+.form-control:focus {
+    box-shadow: none;
+}
+
+.form-control {
+    border-color: transparent transparent rgb(205, 205, 205) transparent;
+}
+
+label {
+    color: #1abc9c;
+    position: absolute;
+    left: 0;
+    transition: all 0.5s ease-in;
+}
+
+input {
+    position: relative;
+}
+
+.ntnsend {
+    background-color: #1abc9c;
+    color: white;
+}
+
+.ntnsend:focus {
+    background-color: #1abc9c;
+    color: white;
+}

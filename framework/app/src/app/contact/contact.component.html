@@ -1,0 +1,29 @@
+<div class="container my-5 py-5">
+    <div class="container mt-5 text-center pt-5">
+        <h1 class="mb-3 fw-bold display-5 pt-3">CONTACT COMPONENT</h1>
+        <div class="d-flex flex-row justify-content-center align-items-center ">
+            <div class="mx-3" style="width: 100px;height: 5px;background-color: #2c3e50;"></div>
+            <i _ngcontent-oue-c6="" class="fa-solid fa-star"></i>
+            <div class="mx-3" style="width: 100px;height: 5px;background-color: #2c3e50;"></div>
+        </div>
+    </div>
+    <form class="mx-auto mt-5 p-3 w-50">
+        <div class="my-4 position-relative ">
+            <label for="input1" [class]="change1?'ms-2 bottom-100':' ms-2 bottom-0'">userName:</label>
+            <input type="text" id="input1" class="form-control py-3" placeholder="userName" (keyup)="func1($event)">
+        </div>
+        <div class="my-4 position-relative">
+            <label for="input2" [class]="change2?'ms-2 bottom-100':' ms-2 bottom-0'">userAge:</label>
+            <input type="text" id="input2" class="form-control py-3" placeholder="userAge" (keyup)="func2($event)">
+        </div>
+        <div class="my-4 position-relative">
+            <label for="input3" [class]="change3?'ms-2 bottom-100':' ms-2 bottom-0'">userEmail:</label>
+            <input type="text" id="input3" class="form-control py-3" placeholder="userEmail" (keyup)="func3($event)">
+        </div>
+        <div class="my-4 position-relative">
+            <label for="input4" [class]="change4?'ms-2 bottom-100':' ms-2 bottom-0'">userPassword:</label>
+            <input type="text" id="input4" class="form-control py-3" placeholder="userPassword" (keyup)="func4($event)">
+        </div>
+        <button class="btn ntnsend">send Message</button>
+    </form>
+</div>

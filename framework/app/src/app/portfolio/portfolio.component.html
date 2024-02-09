@@ -1,0 +1,44 @@
+<div class="container mt-5 pt-5">
+
+
+    <section class="portfolio-body text-center pb-5">
+        <div class="container mt-5 text-center pt-5">
+            <h1 class="mb-3 fw-bold display-5 pt-3">PORTFOLIO COMPONENT</h1>
+            <div class="d-flex flex-row justify-content-center align-items-center ">
+                <div class="mx-3" style="width: 100px;height: 5px;background-color: #2c3e50;"></div>
+                <i _ngcontent-oue-c6="" class="fa-solid fa-star"></i>
+                <div class="mx-3" style="width: 100px;height: 5px;background-color: #2c3e50;"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 gx-5 gy-4" *ngFor="let imgSrc of imgArr; let i = index">
+                    <div class="portfolio-item">
+                        <figure>
+                            <img [src]="imgSrc" class="w-100 rounded" alt="portImg {{i+1}}'">
+                        </figure>
+                        <div (click)="showModal(imgSrc, i)" class="portfolio-item-layer rounded" data-bs-toggle="modal"
+                            data-bs-target="#ImgModal">
+                            <i class="fab fa-plus text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------------------- Model ----------------------------------------->
+    <div class="modal fade" id="ImgModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <i (click)="prevModal()" class=" fa-solid fa-arrow-left text-white btn fs-5 rounded-pill"></i>
+                    <figure>
+                        <img [src]="imgSrc" class="w-100 rounded" [alt]="imgIndexAlt">
+                    </figure>
+                    <i (click)="nextModal()" class="fa-solid fa-arrow-right text-white btn fs-5 rounded-pill"></i>
+                </div>
+            </div>
+        </div>
+    </div>
